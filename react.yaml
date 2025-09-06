@@ -1,36 +1,40 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-app
-  namespace: amine
+  name: react-frontend
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: react-app
+      app: react-frontend
   template:
     metadata:
       labels:
-        app: react-app
+        app: react-frontend
     spec:
       containers:
-      - name: react-app
-        image: salimbouazizi/pfe_r_front:0.0.2
-        ports:
-        - containerPort: 80
+        - name: react-frontend
+          image: yourusername/angular-frontend:latest  # Replace with your actual image
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: react-service
-  namespace: amine
+  name: frontend
+  namespace: default
 spec:
-  type: NodePort
-  ports:
-  - port: 80
-    targetPort: 80
-    nodePort: 30081
   selector:
-    app: react-app
-# Triggered by Jenkins at 02 جويلية, 2025 CET 02:15:12 م
+    app: react-frontend
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
