@@ -57,4 +57,4 @@ spec:
             tcpSocket:
               port: 8082
             initialDelaySeconds: 60
-            periodSeconds: 20
+            periodSeconds: 20# Triggered by Jenkins at 06 سبتمبر, 2025 CET 05:25:50 م
