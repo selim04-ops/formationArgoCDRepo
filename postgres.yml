@@ -25,6 +25,8 @@ spec:
               value: "postgres"
             - name: POSTGRES_PASSWORD
               value: "salim"
+            - name: PGDATA  # Add this
+              value: /var/lib/postgresql/data/pgdata
           resources:
             requests:
               cpu: "100m"
