@@ -32,8 +32,8 @@ metadata:
   name: frontend
   namespace: default
   annotations:
-   # service.beta.kubernetes.io/azure-pip-name: my-static-ip
-    #service.beta.kubernetes.io/azure-load-balancer-resource-group: MC_rg-aks-demoo_aks-demo_eastus
+    service.beta.kubernetes.io/azure-pip-name: my-static-ip
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: MC_rg-aks-demoo_aks-demo_eastus
 spec:
   selector:
     app: react-frontend
