@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "52.224.54.136.nip.io"  # Updated from localhost to the nip.io domain
+    - host: "52.224.54.136"  # Updated from localhost to the nip.io domain
       http:
         paths:
           - path: /api
