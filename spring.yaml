@@ -32,7 +32,7 @@ spec:
               memory: "128Mi"
       containers:
         - name: backend
-          image: salimbouazizi/formation-backend:0.0.1  # Replace with your actual image
+          image: salimbouazizi/formation-backend:0.0.2  # Replace with your actual image
           ports:
             - containerPort: 8082
           envFrom:
