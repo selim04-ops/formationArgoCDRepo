@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: salimbouazizi/formation-frontend:0.0.8 # Replace with your actual image
+          image: salimbouazizi/formation-frontend:0.0.9 # Replace with your actual image
           ports:
             - containerPort: 80
           resources:
